@@ -1,0 +1,234 @@
+/* AQUI EMPIEZA CSS DE INDEX */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    }
+
+.navbar-brand {
+    font-weight: bold;
+    }
+
+.image-space-1 {
+    background-image: url('./Imagenes/avion01.webp');
+    }
+
+.image-space-2 {
+    background-image: url('./Imagenes/ser05.jpg');
+    }
+
+.image-space-3 {
+    background-image: url('./Imagenes/tip01.jpg');
+    }
+
+.image-space-4 {
+    background-image: url('./Imagenes/mem02.jpg');
+    }
+
+.image-space-5 {
+    background-image: url('./Imagenes/nos01.jpeg');
+    }
+
+.image-space-6 {
+    background-image: url('./Imagenes/o01.jpg');
+    }
+
+.image-space-7 {
+    background-image: url('./Imagenes/o04.webp');
+    }
+
+.image-footer {
+    background-image: url('./Imagenes/logo.png');
+    }
+
+header {
+    background-color: #f8f9fa;
+    }
+
+.flight-search {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    }
+
+.services h4, .membership h4 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    }
+
+.distinction ul {
+    list-style: none;
+    padding-left: 0;
+    }
+
+.distinction li {
+    margin-bottom: 10px;
+    }
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    }
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    }
+
+footer a:hover {
+    text-decoration: underline;
+    }
+
+/* AQUI EMPIEZA CSS DE CONTACTO */
+
+body {
+    font-family: Arial, sans-serif;
+    }
+
+.navbar-brand {
+    font-weight: bold;
+    }
+
+header {
+    background-color: #f8f9fa;
+    }
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    }
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    }
+
+footer a:hover {
+    text-decoration: underline;
+    }
+
+    /* AQUI EMPIEZA CSS DE SERVICIOS */
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+.navbar-brand {
+        font-weight: bold;
+    }
+
+header {
+        background-color: #f8f9fa;
+    }
+
+footer {
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+
+footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+footer a {
+        color: #000;
+        text-decoration: none;
+    }
+
+footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* AQUI EMPIEZA CSS DE CONTACTO */
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+.navbar-brand {
+        font-weight: bold;
+    }
+
+header {
+        background-color: #f8f9fa;
+    }
+
+.contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+footer {
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+
+footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+footer a {
+        color: #000;
+        text-decoration: none;
+    }
+
+footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* AQUI EMPIEZA CSS DE MEMBRESIA */
+
+body {
+        font-family: Arial, sans-serif;
+    }
+
+.navbar-brand {
+        font-weight: bold;
+    }
+
+.membership-details ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+.membership-details li {
+        margin-bottom: 10px;
+    }
+
+footer {
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+
+footer ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+footer a {
+        color: #000;
+        text-decoration: none;
+    }
+
+footer a:hover {
+        text-decoration: underline;
+    }
