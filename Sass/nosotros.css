@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+.image-placeholder {
+  background-color: #d3d3d3;
+  border-radius: 15px;
+}
+
+.nosotros-hero-image {
+  width: 100%;
+  height: 400px;
+}
+
+.about-image {
+  width: 100%;
+  height: 200px;
+}
+
+.fleet-image {
+  width: 100%;
+  height: 200px;
+}
+
+.nosotros-intro-section {
+  padding: 50px 0;
+}
+.nosotros-intro-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.nosotros-intro-section p {
+  font-size: 1.2rem;
+}
+
+.about-section {
+  padding: 50px 0;
+}
+.about-section p {
+  font-size: 1rem;
+}
+
+.fleet-section {
+  padding: 50px 0;
+}
+.fleet-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footer-section {
+  padding: 20px 0;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+}
+.footer-section a {
+  color: #000;
+  text-decoration: none;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.btn-dark {
+  transition: all 0.3s ease;
+}
+.btn-dark:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+/*# sourceMappingURL=nosotros.css.map */
