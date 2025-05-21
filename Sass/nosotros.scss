@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Variables
+$primary-color: #000;
+$secondary-color: #fff;
+$grey-placeholder: #d3d3d3;
+
+// Global Styles
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+
+// Image Placeholders
+.image-placeholder {
+    background-color: $grey-placeholder;
+    border-radius: 15px;
+}
+
+.nosotros-hero-image {
+    width: 100%;
+    height: 400px;
+}
+
+.about-image {
+    width: 100%;
+    height: 200px;
+}
+
+.fleet-image {
+    width: 100%;
+    height: 200px;
+}
+
+// Section Styles
+.nosotros-intro-section {
+    padding: 50px 0;
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.about-section {
+    padding: 50px 0;
+    p {
+        font-size: 1rem;
+    }
+}
+
+.fleet-section {
+    padding: 50px 0;
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.footer-section {
+    padding: 20px 0;
+    background-color: $secondary-color;
+    border-top: 1px solid #e0e0e0;
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Button Animations (Bootstrap Enhancement)
+.btn-dark {
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+        background-color: #333;
+    }
+}
