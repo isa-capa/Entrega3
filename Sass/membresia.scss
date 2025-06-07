@@ -4,6 +4,35 @@
 $gris-placeholder: #e3e3e3;
 $gris-footer: #f8f9fa;
 
+// Mixins
+@mixin rounded-image {
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+@mixin placeholder-image {
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &::before {
+    content: "📷";
+    font-size: 2rem;
+    color: #999;
+  }
+}
+
+@mixin button-animation {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
 // General
 body {
   background: #fff;
@@ -35,7 +64,9 @@ a {
   .hero-placeholder {
     width: 100%;
     height: 260px;
-    background: $gris-placeholder;
+    
+    background: linear-gradient(90deg, #1b2c55,#3d85a9,#63cac8,#b8edff);
+    
     border-radius: 0 0 16px 16px;
     object-fit: cover;
   }
@@ -69,6 +100,10 @@ h1, h2 {
     background: $gris-placeholder;
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
   }
 }
 
