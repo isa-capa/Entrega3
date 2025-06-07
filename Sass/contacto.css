@@ -1,119 +1,77 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 body {
-  background: #fff;
-  color: #000;
-  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  font-family: "Inter", Arial, sans-serif;
+  color: #222;
 }
 
-.logo-placeholder {
-  width: 48px;
-  height: 48px;
-  background: #d1d1d1;
-  border-radius: 16px;
-  display: inline-block;
+h1, h2 {
+  color: #111;
 }
 
-.navbar .navbar-brand {
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-.navbar .btn {
-  transition: all 0.3s;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-.navbar .btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+.lead {
+  font-size: 1.15rem;
 }
 
-.contact-main .contact-image {
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  background: #e5e5e5;
+}
+
+.btn-animated {
+  transition: transform 0.2s, box-shadow 0.2s;
+  will-change: transform;
+}
+.btn-animated:hover, .btn-animated:focus {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
   width: 100%;
   height: 300px;
-  background: #d1d1d1;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 260px;
-  object-fit: cover;
-}
-.contact-main .contact-form .form-control, .contact-main .contact-form textarea {
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  background: #f8f9fa;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-.contact-main .contact-form .form-control:focus, .contact-main .contact-form textarea:focus {
-  border-color: #000;
-  box-shadow: none;
-}
-.contact-main .contact-form .btn-dark {
-  transition: all 0.3s;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  background: #000;
-  border: none;
-  transition: all 0.3s;
-}
-.contact-main .contact-form .btn-dark:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-.contact-main .contact-form .btn-dark:hover {
-  background: rgb(25.5, 25.5, 25.5);
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: #e5e5e5;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 
-.footer-section {
-  background: #f8f9fa;
+.secondary-image {
+  width: 100%;
+  height: 180px;
+  background: #e5e5e5;
+  border-radius: 1rem;
 }
-.footer-section .footer-logo .logo-placeholder {
-  width: 40px;
-  height: 40px;
-  margin-right: 8px;
+
+.fleet-image {
+  width: 100%;
+  height: 180px;
+  background: #e5e5e5;
+  border-radius: 1rem;
 }
-.footer-section .footer-logo span {
-  font-size: 1.1rem;
-  font-weight: bold;
+
+footer {
+  font-size: 0.95rem;
 }
-.footer-section .footer-link {
-  color: #000;
+footer .footer-link {
+  color: #222;
   text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
 }
-.footer-section .footer-link:hover {
-  opacity: 1;
+footer .footer-link:hover {
   text-decoration: underline;
 }
-.footer-section ul {
-  margin-bottom: 0;
-}
-.footer-section ul li {
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 991.98px) {
-  .contact-main .contact-image {
-    height: 220px;
-    margin-top: 2rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .contact-main {
-    padding-top: 2rem;
-  }
-  .contact-main .contact-image {
+@media (max-width: 767px) {
+  .main-image {
     height: 180px;
-    margin-bottom: 2rem;
   }
-  .footer-section .footer-logo {
-    margin-bottom: 1rem;
+  .secondary-image,
+  .fleet-image {
+    height: 120px;
   }
 }
 

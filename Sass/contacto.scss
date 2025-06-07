@@ -2,152 +2,88 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
 
 // Variables
-$primary: #000;
-$gray-light: #f8f9fa;
-$gray-placeholder: #d1d1d1;
-$border-radius: 16px;
+$primary-gray: #e5e5e5;
+$secondary-gray: #f8f9fa;
 
 // General
 body {
-  background: #fff;
-  color: $primary;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: $secondary-gray;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #222;
 }
 
-// Mixin
-@mixin button-animation {
-  transition: all 0.3s;
-  &:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  }
+h1, h2 {
+  color: #111;
 }
 
-// Logo placeholder
-.logo-placeholder {
-  width: 48px;
-  height: 48px;
-  background: $gray-placeholder;
-  border-radius: $border-radius;
-  display: inline-block;
+.lead {
+  font-size: 1.15rem;
 }
 
-// Header
+// Navbar
 .navbar {
-  .navbar-brand {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-  }
-  .btn {
-    @include button-animation;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  background: $primary-gray;
+}
+
+.btn-animated {
+  transition: transform 0.2s, box-shadow 0.2s;
+  will-change: transform;
+  &:hover, &:focus {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   }
 }
 
-// Main Contact Section
-.contact-main {
-  .contact-image {
-    width: 100%;
-    height: 300px;
-    background: $gray-placeholder;
-    border-radius: $border-radius;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 260px;
-    
-    object-fit: cover;
-  }
-  .contact-form {
-    .form-control, textarea {
-      border-radius: 10px;
-      border: 1px solid #e0e0e0;
-      background: $gray-light;
-      font-size: 1rem;
-      transition: border-color 0.3s;
-      &:focus {
-        border-color: $primary;
-        box-shadow: none;
-      }
-    }
-    .btn-dark {
-      @include button-animation;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      background: $primary;
-      border: none;
-      transition: all 0.3s;
-      &:hover {
-        background: lighten($primary, 10%);
-        transform: translateY(-2px) scale(1.03);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      }
-    }
-  }
+// Main Image Placeholder
+.main-image {
+  width: 100%;
+  height: 300px;
+  background: $primary-gray;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+// Secondary Images
+.secondary-image {
+  width: 100%;
+  height: 180px;
+  background: $primary-gray;
+  border-radius: 1rem;
+}
+
+// Fleet Images
+.fleet-image {
+  width: 100%;
+  height: 180px;
+  background: $primary-gray;
+  border-radius: 1rem;
 }
 
 // Footer
-.footer-section {
-  background: $gray-light;
-  .footer-logo {
-    .logo-placeholder {
-      width: 40px;
-      height: 40px;
-      margin-right: 8px;
-    }
-    span {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-  }
+footer {
+  font-size: 0.95rem;
   .footer-link {
-    color: $primary;
+    color: #222;
     text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.2s;
     &:hover {
-      opacity: 1;
       text-decoration: underline;
     }
   }
-  ul {
-    margin-bottom: 0;
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
 }
 
-// Animación para botones (mixin)
-@mixin button-animation {
-  transition: all 0.3s;
-  &:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+// Responsive adjustments
+@media (max-width: 767px) {
+  .main-image {
+    height: 180px;
   }
-}
-
-// Responsive
-@media (max-width: 991.98px) {
-  .contact-main .contact-image {
-    height: 220px;
-    margin-top: 2rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .contact-main {
-    padding-top: 2rem;
-    .contact-image {
-      height: 180px;
-      margin-bottom: 2rem;
-    }
-  }
-  .footer-section {
-    .footer-logo {
-      margin-bottom: 1rem;
-    }
+  .secondary-image,
+  .fleet-image {
+    height: 120px;
   }
 }
