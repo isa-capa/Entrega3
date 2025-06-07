@@ -1,73 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+// Import Bootstrap
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
 
 // Variables
-$primary-color: #000;
-$secondary-color: #fff;
-$grey-placeholder: #d3d3d3;
+$primary: #000;
+$gray-light: #f8f9fa;
+$gray-placeholder: #d1d1d1;
+$border-radius: 16px;
 
-// Global Styles
+// General
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $primary-color;
-    background-color: $secondary-color;
+  background: #fff;
+  color: $primary;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-// Image Placeholders
-.image-placeholder {
-    background-color: $grey-placeholder;
-    border-radius: 15px;
+// Mixin
+@mixin button-animation {
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
 }
 
-.contact-image {
+// Logo placeholder
+.logo-placeholder {
+  width: 48px;
+  height: 48px;
+  background: $gray-placeholder;
+  border-radius: $border-radius;
+  display: inline-block;
+}
+
+// Header
+.navbar {
+  .navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  .btn {
+    @include button-animation;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+}
+
+// Main Contact Section
+.contact-main {
+  .contact-image {
     width: 100%;
     height: 300px;
+    background: $gray-placeholder;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 260px;
+    
+    object-fit: cover;
+  }
+  .contact-form {
+    .form-control, textarea {
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      background: $gray-light;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      &:focus {
+        border-color: $primary;
+        box-shadow: none;
+      }
+    }
+    .btn-dark {
+      @include button-animation;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: $primary;
+      border: none;
+      transition: all 0.3s;
+      &:hover {
+        background: lighten($primary, 10%);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      }
+    }
+  }
 }
 
-// Section Styles
-.contact-intro-section {
-    padding: 50px 0;
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-    }
-    h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-
-.contact-form-section {
-    padding: 50px 0;
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    .form-control, .form-select {
-        border-radius: 10px;
-    }
-}
-
+// Footer
 .footer-section {
-    padding: 20px 0;
-    background-color: $secondary-color;
-    border-top: 1px solid #e0e0e0;
-    a {
-        color: $primary-color;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+  background: $gray-light;
+  .footer-logo {
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
     }
+    span {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+  .footer-link {
+    color: $primary;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
-// Button Animations (Bootstrap Enhancement)
-.btn-dark {
-    transition: all 0.3s ease;
-    &:hover {
-        transform: scale(1.05);
-        background-color: #333;
+// Animación para botones (mixin)
+@mixin button-animation {
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+}
+
+// Responsive
+@media (max-width: 991.98px) {
+  .contact-main .contact-image {
+    height: 220px;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact-main {
+    padding-top: 2rem;
+    .contact-image {
+      height: 180px;
+      margin-bottom: 2rem;
     }
+  }
+  .footer-section {
+    .footer-logo {
+      margin-bottom: 1rem;
+    }
+  }
 }

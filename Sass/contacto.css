@@ -1,65 +1,120 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 body {
-  font-family: "Roboto", sans-serif;
+  background: #fff;
   color: #000;
-  background-color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.image-placeholder {
-  background-color: #d3d3d3;
-  border-radius: 15px;
+.logo-placeholder {
+  width: 48px;
+  height: 48px;
+  background: #d1d1d1;
+  border-radius: 16px;
+  display: inline-block;
 }
 
-.contact-image {
+.navbar .navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.navbar .btn {
+  transition: all 0.3s;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.navbar .btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.contact-main .contact-image {
   width: 100%;
   height: 300px;
+  background: #d1d1d1;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  object-fit: cover;
 }
-
-.contact-intro-section {
-  padding: 50px 0;
-}
-.contact-intro-section h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-.contact-intro-section h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.contact-intro-section p {
-  font-size: 1rem;
-}
-
-.contact-form-section {
-  padding: 50px 0;
-}
-.contact-form-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-.contact-form-section .form-control, .contact-form-section .form-select {
+.contact-main .contact-form .form-control, .contact-main .contact-form textarea {
   border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.contact-main .contact-form .form-control:focus, .contact-main .contact-form textarea:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+.contact-main .contact-form .btn-dark {
+  transition: all 0.3s;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #000;
+  border: none;
+  transition: all 0.3s;
+}
+.contact-main .contact-form .btn-dark:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.contact-main .contact-form .btn-dark:hover {
+  background: rgb(25.5, 25.5, 25.5);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .footer-section {
-  padding: 20px 0;
-  background-color: #fff;
-  border-top: 1px solid #e0e0e0;
+  background: #f8f9fa;
 }
-.footer-section a {
+.footer-section .footer-logo .logo-placeholder {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+.footer-section .footer-logo span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.footer-section .footer-link {
   color: #000;
   text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
-.footer-section a:hover {
+.footer-section .footer-link:hover {
+  opacity: 1;
   text-decoration: underline;
 }
-
-.btn-dark {
-  transition: all 0.3s ease;
+.footer-section ul {
+  margin-bottom: 0;
 }
-.btn-dark:hover {
-  transform: scale(1.05);
-  background-color: #333;
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .contact-main .contact-image {
+    height: 220px;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact-main {
+    padding-top: 2rem;
+  }
+  .contact-main .contact-image {
+    height: 180px;
+    margin-bottom: 2rem;
+  }
+  .footer-section .footer-logo {
+    margin-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=contacto.css.map */
