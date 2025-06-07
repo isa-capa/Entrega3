@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+// Mixins
+@mixin rounded-image {
+  
+  overflow: hidden;
+}
+
+@mixin placeholder-image {
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &::before {
+    
+    font-size: 2rem;
+    color: #999;
+  }
+}
+
+@mixin button-animation {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
 // Variables
 $primary-gray: #e5e5e5;
 $secondary-gray: #f8f9fa;
@@ -46,6 +76,10 @@ h1, h2 {
   display: block;
   border-radius: 1rem;
   margin-bottom: 2rem;
+  @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
 }
 
 // Secondary Images
@@ -54,6 +88,10 @@ h1, h2 {
   height: 180px;
   background: $primary-gray;
   border-radius: 1rem;
+  @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
 }
 
 // Fleet Images
@@ -62,6 +100,10 @@ h1, h2 {
   height: 180px;
   background: $primary-gray;
   border-radius: 1rem;
+  @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
 }
 
 // Footer

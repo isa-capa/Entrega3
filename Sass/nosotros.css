@@ -1,75 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
-  color: #000;
-  background-color: #fff;
+  background-color: #f8f9fa;
+  font-family: "Inter", Arial, sans-serif;
+  color: #222;
 }
 
-.image-placeholder {
-  background-color: #d3d3d3;
-  border-radius: 15px;
+h1, h2 {
+  color: #111;
 }
 
-.nosotros-hero-image {
+.lead {
+  font-size: 1.15rem;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  background: #e5e5e5;
+}
+
+.btn-animated {
+  transition: transform 0.2s, box-shadow 0.2s;
+  will-change: transform;
+}
+.btn-animated:hover, .btn-animated:focus {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
   width: 100%;
-  height: 400px;
-}
-
-.about-image {
-  width: 100%;
+  height: 300px;
+  background: #e5e5e5;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   height: 200px;
+  object-fit: cover;
+}
+.main-image::before {
+  font-size: 2rem;
+  color: #999;
+}
+
+.secondary-image {
+  width: 100%;
+  height: 180px;
+  background: #e5e5e5;
+  border-radius: 1rem;
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 200px;
+  object-fit: cover;
+}
+.secondary-image::before {
+  font-size: 2rem;
+  color: #999;
 }
 
 .fleet-image {
   width: 100%;
+  height: 180px;
+  background: #e5e5e5;
+  border-radius: 1rem;
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   height: 200px;
+  object-fit: cover;
 }
-
-.nosotros-intro-section {
-  padding: 50px 0;
-}
-.nosotros-intro-section h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-.nosotros-intro-section p {
-  font-size: 1.2rem;
-}
-
-.about-section {
-  padding: 50px 0;
-}
-.about-section p {
-  font-size: 1rem;
-}
-
-.fleet-section {
-  padding: 50px 0;
-}
-.fleet-section h2 {
+.fleet-image::before {
   font-size: 2rem;
-  font-weight: 700;
+  color: #999;
 }
 
-.footer-section {
-  padding: 20px 0;
-  background-color: #fff;
-  border-top: 1px solid #e0e0e0;
+footer {
+  font-size: 0.95rem;
 }
-.footer-section a {
-  color: #000;
+footer .footer-link {
+  color: #222;
   text-decoration: none;
 }
-.footer-section a:hover {
+footer .footer-link:hover {
   text-decoration: underline;
 }
 
-.btn-dark {
-  transition: all 0.3s ease;
-}
-.btn-dark:hover {
-  transform: scale(1.05);
-  background-color: #333;
+@media (max-width: 767px) {
+  .main-image {
+    height: 180px;
+  }
+  .secondary-image,
+  .fleet-image {
+    height: 120px;
+  }
 }
 
 /*# sourceMappingURL=nosotros.css.map */
