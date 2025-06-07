@@ -12,8 +12,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-            <a class="navbar-brand" href="#">Zerval Jets</a>
-            <img src="./Imagenes/logo.png" alt="100" width="100" height="100">
+            <a class="navbar-brand" href="./index.html">Zerval Jets</a>
+            <img src="../Imagenes/logo.png" alt="100" width="100" height="100">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,178 +23,292 @@
                 <li class="nav-item"><a class="nav-link" href="./Pages/servicios.html">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Pages/membresia.html">Membresia</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Pages/contacto.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" id="bookFlightBtn">Book a Flight</a></li>
             </ul>
             </div>
         </div>
         </nav>
     </header>
 
+
     <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <img src="./Imagenes/con01.jpg" alt="Welcome" class="hero-image mb-4">
-            <h1 class="display-4 fw-bold">SE PARTE DEL CLUB ZERVAL JETS</h1>
-            <p class="lead mb-4">Membresía</p>
-        </div>
-    </section>
-
-    <!-- Flight Booking Form -->
-    <section class="booking-section">
-        <div class="container">
-            <p class="text-center mb-4">Le invitamos a completar el formulario para que nuestro equipo de ventas se ponga en contacto con usted.</p>
-            <form class="row g-3 justify-content-center">
-                <div class="col-md-3">
-                    <select class="form-select" aria-label="Departure Airport">
-                        <option selected>Salida</option>
-                        <option value="MEX">Mexico City (MEX)</option>
-                        <option value="CUN">Cancún (CUN)</option>
-                        <option value="GDL">Guadalajara (GDL)</option>
-                        <option value="MTY">Monterrey (MTY)</option>
-                        <option value="TIJ">Tijuana (TIJ)</option>
-                        <option value="SJD">Los Cabos (SJD)</option>
-                        <option value="PVR">Puerto Vallarta (PVR)</option>
-                        <option value="MID">Mérida (MID)</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <select class="form-select" aria-label="Arrival Airport">
-                        <option selected>Llegada</option>
-                        <option value="MEX">Mexico City (MEX)</option>
-                        <option value="CUN">Cancún (CUN)</option>
-                        <option value="GDL">Guadalajara (GDL)</option>
-                        <option value="MTY">Monterrey (MTY)</option>
-                        <option value="TIJ">Tijuana (TIJ)</option>
-                        <option value="SJD">Los Cabos (SJD)</option>
-                        <option value="PVR">Puerto Vallarta (PVR)</option>
-                        <option value="MID">Mérida (MID)</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <input type="date" class="form-control" aria-label="Flight Date">
-                </div>
-                <div class="col-md-2">
-                    <input type="number" class="form-control" min="1" max="10" placeholder="Pasajeros" aria-label="Number of Passengers">
-                </div>
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-dark w-100">Buscar</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <h2 class="text-center mb-5">SERVICIOS</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="./Imagenes/ser01.jpg" alt="Private Flights" class="service-image mb-3">
-                    <h5>Vuelos privados On-Demand</h5>
-                    <p>Charter de vuelos privados</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="./Imagenes/ser02.jpg" alt="Premier Social Club" class="service-image mb-3">
-                    <h5>Membresía Premier Social Club</h5>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="./Imagenes/ser05.jpg" alt="Corporate Program" class="service-image mb-3">
-                    <h5>Programa Empresarial</h5>
-                    <p>Membresía Corporativa flexible</p>
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <h1 class="hero-title">SE PARTE DEL CLUB<br><span>ZERVAL JETS</span></h1>
+                        <button type="button" class="btn btn-dark btn-lg mt-4">Membresía</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section class="why-us-section">
+    <!-- Flight Booking Section -->
+    <section class="booking-section py-5">
+        <div class="container">
+            <div class="booking-card">
+                <h3 class="mb-4">BOOK A FLIGHT</h3>
+                <p class="text-muted mb-4">Le invitamos a completar el formulario para que nuestro equipo de ventas se ponga en contacto con usted.</p>
+                
+                <form class="booking-form">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">DE:</label>
+                            <select class="form-select">
+                                <option value="">Seleccionar origen</option>
+                                <option value="MEX">Ciudad de México (MEX)</option>
+                                <option value="CUN">Cancún (CUN)</option>
+                                <option value="GDL">Guadalajara (GDL)</option>
+                                <option value="MTY">Monterrey (MTY)</option>
+                                <option value="PVR">Puerto Vallarta (PVR)</option>
+                                <option value="ACA">Acapulco (ACA)</option>
+                                <option value="TIJ">Tijuana (TIJ)</option>
+                                <option value="VER">Veracruz (VER)</option>
+                                <option value="QRO">Querétaro (QRO)</option>
+                                <option value="CUL">Culiacán (CUL)</option>
+                                <option value="SLP">San Luis Potosí (SLP)</option>
+                                <option value="AGU">Aguascalientes (AGU)</option>
+                                <option value="ZIH">Zihuatanejo (ZIH)</option>
+                                <option value="HMO">Hermosillo (HMO)</option>
+                                <option value="TRC">Torreón (TRC)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 text-center align-self-end">
+                            <span class="flight-arrow">A:</span>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">SALIDA:</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">LLEGADA:</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">PASAJEROS:</label>
+                            <select class="form-select">
+                                <option value="1">1 Pasajero</option>
+                                <option value="2">2 Pasajeros</option>
+                                <option value="3">3 Pasajeros</option>
+                                <option value="4">4 Pasajeros</option>
+                                <option value="5">5 Pasajeros</option>
+                                <option value="6">6 Pasajeros</option>
+                                <option value="7">7 Pasajeros</option>
+                                <option value="8">8 Pasajeros</option>
+                                <option value="9">9 Pasajeros</option>
+                                <option value="10">10 Pasajeros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option value="">Seleccionar destino</option>
+                                <option value="MEX">Ciudad de México (MEX)</option>
+                                <option value="CUN">Cancún (CUN)</option>
+                                <option value="GDL">Guadalajara (GDL)</option>
+                                <option value="MTY">Monterrey (MTY)</option>
+                                <option value="PVR">Puerto Vallarta (PVR)</option>
+                                <option value="ACA">Acapulco (ACA)</option>
+                                <option value="TIJ">Tijuana (TIJ)</option>
+                                <option value="VER">Veracruz (VER)</option>
+                                <option value="QRO">Querétaro (QRO)</option>
+                                <option value="CUL">Culiacán (CUL)</option>
+                                <option value="SLP">San Luis Potosí (SLP)</option>
+                                <option value="AGU">Aguascalientes (AGU)</option>
+                                <option value="ZIH">Zihuatanejo (ZIH)</option>
+                                <option value="HMO">Hermosillo (HMO)</option>
+                                <option value="TRC">Torreón (TRC)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 ms-auto">
+                            <button type="submit" class="btn btn-dark w-100">BUSCAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">SERVICIOS</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="./Imagenes/ser01.jpg" alt="Vuelos privados">
+                        </div>
+                        <div class="service-content">
+                            <h5>Vuelos privados On-Demand</h5>
+                            <p class="text-muted">Disfrute de vuelos privados personalizados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="./Imagenes/ser02.jpg" alt="Vuelos privados"></div>
+                        <div class="service-content">
+                            <h5>Membresía</h5>
+                            <p class="text-muted">Membresía Premier Social Club</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="./Imagenes/serv03.jpg" alt="Vuelos privados"></div>
+                        <div class="service-content">
+                            <h5>Programa Empresarial</h5>
+                            <p class="text-muted">Membresía Corporativa en Private Jets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Distinguishes Us Section -->
+    <section class="distinguish-section py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>¿QUÉ NOS DISTINGUE?</h2>
-                    <p><strong>Flota exclusiva:</strong> Jets modernos y confiables, mantenidos bajo los estándares de la industria.</p>
-                    <p><strong>Atención personalizada:</strong> Nos encargamos de gestionar todo, ajustándonos a tus preferencias, gastronomía, horarios, etc.</p>
-                    <p><strong>Confidencialidad y eficiencia:</strong> Privacidad garantizada y operaciones puntuales, sin comprometer calidad.</p>
-                    <button class="btn btn-dark me-2">Membresía</button>
-                    <button class="btn btn-dark">Book a Flight</button>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">¿Qué nos distingue?</h2>
+                    
+                    <div class="feature-item mb-4">
+                        <h5>Flota exclusiva:</h5>
+                        <p class="text-muted">Jets modernos y confortables, mantenidos según los más altos estándares de la industria.</p>
+                    </div>
+                    
+                    <div class="feature-item mb-4">
+                        <h5>Asesoría experta:</h5>
+                        <p class="text-muted">Nuestro equipo tiene personal todo día que gestionan todos los aspectos del viaje.</p>
+                    </div>
+                    
+                    <div class="feature-item mb-4">
+                        <h5>Confidencialidad y eficiencia:</h5>
+                        <p class="text-muted">Privacidad garantizada y experiencias puntuales. Sin comparaciones, siempre!</p>
+                    </div>
+                    
+                    <div class="d-flex gap-3">
+                        <button type="button" class="btn btn-dark">Membresía</button>
+                        <button type="button" class="btn btn-outline-dark">BOOK A FLIGHT</button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="./Imagenes/nos01.jpeg" alt="Businessman" class="why-us-image">
+                <div class="col-lg-6">
+                    <div class="distinguish-image">
+                        <img src="./Imagenes/dis01.jpg" alt="Vuelos privados"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Membership Section -->
-    <section class="membership-section">
+    <section class="membership-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">MEMBRESÍA</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./Imagenes/mem01.webp" alt="Private Jet On-Demand" class="membership-image mb-3">
-                    <h5>Vuelos privados On-Demand</h5>
-                    <p>Servicio de Charter de vuelos privados, con atención personalizada.</p>
+            <h2 class="mb-5">Membresía</h2>
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <div class="membership-card">
+
+                        <div class="membership-image">
+                            <img src="./Imagenes/mem01.webp" alt="Vuelos privados">
+                        </div>
+                        
+                        <div class="membership-content">
+                            <h5>Vuelos privados On-Demand</h5>
+                            <p class="text-muted">Servicios de Charter de vuelos privados, con atención personalizada.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="./Imagenes/mem02.jpg" alt="Premier Social Club" class="membership-image mb-3">
-                    <h5>Premier Social Club</h5>
-                    <p>Accede a un servicio exclusivo de Concierge, que cuenta con transporte terrestre de lujo...</p>
+
+                <div class="col-lg-6">
+                    <div class="membership-card">
+                        <div class="membership-image">
+                            <img src="./Imagenes/ser08.jpg" alt="Vuelos privados">
+                        </div>
+                        <div class="membership-content">
+                            <h5>Premier Social Club</h5>
+                            <p class="text-muted">Acceda a un servicio exclusivo de Concierto privado con transporte terrestre de lujo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="contact-section">
+    <section class="contact-section py-5">
         <div class="container">
-            <h2 class="text-center mb-5">AGENDA TU LLAMADA</h2>
-            <form class="row g-3 justify-content-center">
-                <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Name">
+            <h2 class="mb-4">Agenda tu llamada</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Apellido">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control" placeholder="email@email.com">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="4" placeholder="Déjanos un mensaje"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <p class="small text-muted">Escriba su consulta o pregunta</p>
+                                <button type="submit" class="btn btn-dark">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last Name">
-                </div>
-                <div class="col-md-4">
-                    <input type="email" class="form-control" placeholder="Correo electrónico" aria-label="Email">
-                </div>
-                <div class="col-md-8">
-                    <textarea class="form-control" placeholder="Déjanos un mensaje" rows="3" aria-label="Message"></textarea>
-                </div>
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-dark w-100">Enviar</button>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-section">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <p>Zerval Jets</p>
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="footer-brand">
+                        <i class="fas fa-plane"></i>
+                        <span>Zerval Jets</span>
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3">
+                    <h6>Servicios</h6>
                     <ul class="list-unstyled">
-                        <li><a href="./Pages/contacto.html">Contacto</a></li>
-                        <li><a href="./Pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="./Pages/servicios.html">Servicios</a></li>
-                        <li><a href="./Pages/membresia.html">Membresía</a></li>
+                        <li><a href="#" class="text-light">Vuelos privados</a></li>
+                        <li><a href="#" class="text-light">Membresía</a></li>
+                        <li><a href="#" class="text-light">Programa Empresarial</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3">
+                    <h6>Enlaces</h6>
                     <ul class="list-unstyled">
-                        <a href="https://www.youtube.com/results?search_query=jets+privados">YouTube</a>
-                        <a href="https://www.instagram.com/">Instagram</a>
-                        <a href="https://www.tiktok.com/search?lang=es&q=jets%20privados&t=1743653469859">TikTok</a>
+                        <li><a href="#" class="text-light">Política</a></li>
+                        <li><a href="#" class="text-light">Privacidad</a></li>
+                        <li><a href="#" class="text-light">Software</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6>Otros</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Status</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
