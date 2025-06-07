@@ -1,107 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-// Variables
-$primary-color: #000;
-$secondary-color: #fff;
-$grey-placeholder: #d3d3d3;
+// Mixins
+@mixin rounded-image {
+  border-radius: $border-radius;
+  overflow: hidden;
+}
 
-// Global Styles
+@mixin placeholder-image {
+  background-color: #e0e0e0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &::before {
+    content: "";
+    font-size: 2rem;
+    color: #999;
+  }
+}
+
+@mixin button-animation {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Variables
+$primary-color: #23272b;
+$secondary-color: #f8f9fa;
+$accent-color: #0d6efd;
+$border-radius: 1rem;
+$placeholder-bg: #d1d5db;
+$footer-bg: #fff;
+$footer-border: #e9ecef;
+
+// General
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $primary-color;
-    background-color: $secondary-color;
+  font-family: 'Inter', Arial, sans-serif;
+  background: $secondary-color;
+  color: $primary-color;
+}
+
+// Navbar
+.navbar {
+  .logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background: $placeholder-bg;
+    border-radius: $border-radius;
+    display: inline-block;
+  }
+  .nav-link.active {
+    font-weight: bold;
+    color: $accent-color !important;
+  }
+}
+
+// Hero Section
+.hero-section {
+  min-height: 400px;
+  background: linear-gradient(180deg, #23272b 60%, #6c757d 100%);
+  position: relative;
+  .hero-image {
+    width: 100%;
+    height: 240px;
+    background: $placeholder-bg;
+    border-radius: $border-radius;
+    margin-top: 2rem;
+    @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
+  }
+  h1, p {
+    z-index: 2;
+    position: relative;
+  }
 }
 
 // Image Placeholders
-.image-placeholder {
-    background-color: $grey-placeholder;
-    border-radius: 15px;
+.img-placeholder,
+.img-placeholder-large {
+  background: $placeholder-bg;
+  border-radius: $border-radius;
+  width: 100%;
+  display: block;
+   @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
+}
+.img-placeholder {
+  height: 180px;
+   @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
+}
+.img-placeholder-large {
+  height: 300px;
+   @include placeholder-image;
+      @include rounded-image;
+      height: 200px;
+      object-fit: cover;
 }
 
-.servicios-hero-image {
-    width: 100%;
-    height: 400px;
+// Animación para botones
+.btn-animated {
+  transition: transform 0.2s, box-shadow 0.2s;
+  &:hover, &:focus {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  }
 }
 
-.soluciones-image {
-    width: 100%;
-    height: 250px;
-}
-
-.asesoramiento-image {
-    width: 100%;
-    height: 250px;
-}
-
-.biblioteca-image {
-    width: 100%;
-    height: 200px;
-}
-
-// Section Styles
-.servicios-intro-section {
-    padding: 50px 0;
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-    }
-    p {
-        font-size: 1.2rem;
-    }
-}
-
-.soluciones-section {
-    padding: 50px 0;
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-
-.biblioteca-section {
-    padding: 50px 0;
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-}
-
-.propuesta-section {
-    padding: 50px 0;
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-
-.footer-section {
-    padding: 20px 0;
-    background-color: $secondary-color;
-    border-top: 1px solid #e0e0e0;
-    a {
-        color: $primary-color;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-// Button Animations (Bootstrap Enhancement)
-.btn-dark {
-    transition: all 0.3s ease;
+// Footer
+footer {
+  background: $footer-bg;
+  border-top: 1px solid $footer-border;
+  .logo-placeholder {
+    width: 32px;
+    height: 32px;
+    background: $placeholder-bg;
+    border-radius: $border-radius;
+    display: inline-block;
+  }
+  .footer-link {
+    color: $primary-color;
+    text-decoration: none;
     &:hover {
-        transform: scale(1.05);
-        background-color: #333;
+      color: $accent-color;
+      text-decoration: underline;
     }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero-section .hero-image {
+    height: 140px;
+  }
+  .img-placeholder-large {
+    height: 180px;
+  }
 }
